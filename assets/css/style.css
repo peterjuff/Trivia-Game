@@ -1,7 +1,33 @@
+body {
+    background-color: rgb(133, 133, 214);
+    text-align: center;
+    padding: 20px;
+}
+
+
+
 #start {
     color: rgb(88, 54, 54);
     background-color: red;
-    padding: 20px;
+    
+    font-size: 20px;
+    padding: 120px;
+
+}
+
+#start:hover {
+
+    background-color: rgb(228, 209, 44);
+
+}   
+
+#press {
+    font-size: 20px;
+    padding: 30px;
+}
+
+#triviaGame {
+    font-size: 50px;
 
 }
 
