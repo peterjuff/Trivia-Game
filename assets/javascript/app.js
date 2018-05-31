@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+window.onload = function() {
+
+    $("#timer").hide();
+}    
 
 var seconds = 100;
 
@@ -9,6 +13,11 @@ $("#start").on("click", function() {
     console.log("button was clicked");
     intervalId = setInterval(decrement, 1000);
     $("#start").hide();
+    $("#press").hide();
+    $("#remove").hide();
+    $("#timer").show();
+    $("#timer").html("<p>" + seconds + "</p>");
+    console.log(seconds);
 
 });
 
