@@ -1,29 +1,92 @@
 $(document).ready(function() {
 
-window.onload = function() {
+    var questions = [
+        {
+        quest: "What is the only vowel on a standard keyboard not located in the top row?",
+        a1: "A",
+        a2: "U",
+        a3: "I",
+        a4: "E",
+        correct: "a1"
+        },
+        {
+        quest: "How many strings are on a cello?",
+        a1: "5",
+        a2: "17",
+        a3: "4",
+        a4: "6",
+        correct: "a3"
+        }
+      ]
 
-    $("#timer").hide();
-}    
+      // holds setInterval
+      var countdown;
 
-var seconds = 100;
+      var quiz = {
 
-var intervalId;
+        timer: 60,
+        correct: 0,
+        incorrect: 0,
 
-$("#start").on("click", function() {
-    console.log("button was clicked");
-    intervalId = setInterval(decrement, 1000);
-    $("#start").hide();
-    $("#press").hide();
-    $("#remove").hide();
-    $("#timer").show();
-    $("#timer").html("<p>" + seconds + "</p>");
-    console.log(seconds);
+        clock: function() {
 
-});
+        },
 
-function decrement() {
-    seconds--;
-}
+        start: function() {
+
+        },
+
+        finished: function() {
+
+        },
+
+        result: function() {
+
+        }
+
+
+      };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// window.onload = function() {
+
+//     $("#timer").hide();
+// }    
+
+// var seconds = 100;
+
+// var intervalId;
+
+// $("#start").on("click", function() {
+//     console.log("button was clicked");
+//     intervalId = setInterval(decrement, 1000);
+//     $("#remove").remove();
+//     $("#timer").show();
+//     $("#timer").html("<p>" + seconds + "</p>");
+//     console.log(seconds);
+
+// });
+
+// function decrement() {
+//     seconds--;
+// }
 
 });
 
