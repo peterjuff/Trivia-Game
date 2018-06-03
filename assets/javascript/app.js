@@ -59,7 +59,7 @@ $(document).ready(function() {
 
         start: function() {
           countdown = setInterval(quiz.clock, 1000);
-          $("#clock").append("<h2>Time Remaining: <span id='timer'>60</span> Seconds</h2>");
+          $("#clock").append("<h2>Time Remaining: <span id='timer'>30</span> Seconds</h2>");
           $("#remove").remove();
           for (var i = 0; i < questions.length; i++) {
             $("#questDisplay").append("<h2>" + questions[i].quest + "</h2>");
@@ -141,7 +141,9 @@ $(document).ready(function() {
         result: function() {
           clearInterval(countdown);
           $("#questDisplay").remove();
-          $("#finished").html("<h2>All Done!</h2>");
+          $("#finished").append("<h2>Complete!</h2>");
+          $("#correctAns").append("<h3>Correct Answers: " + this.correct + "</h3>");
+          $("#incorrectAns").append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
         }
 
 
